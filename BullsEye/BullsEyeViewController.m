@@ -97,10 +97,13 @@
     _currentValue = lroundf(slider.value);
 }
 
-
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     [self startNewRound];
     [self updateLabels];
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 @end
