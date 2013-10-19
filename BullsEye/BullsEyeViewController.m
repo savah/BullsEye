@@ -69,8 +69,15 @@
 }
 
 - (IBAction)startOver {
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionFade;
+    transition.duration = 1;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+
     [self startNewGame];
     [self updateLabels];
+    
+    [self.view.layer addAnimation:transition forKey:nil];
 }
 
 - (void)updateLabels {

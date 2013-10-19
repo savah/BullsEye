@@ -10,5 +10,9 @@
 
 @interface AboutViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
 - (IBAction)close;
+
+
 @end
